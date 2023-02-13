@@ -3,18 +3,27 @@ import "./Logout.css"
 import { useDispatch } from 'react-redux';
 import { useSelector } from "react-redux"
 import {logout, selectUser} from "../userSlice";
+import { useNavigate } from 'react-router-dom';
 
 function Logout() {
     const dispatch = useDispatch();
     const user = useSelector(selectUser)
+    const navigate = useNavigate()
 
     const handleLogout =(e) => {
         e.preventDefault();
 
         dispatch(logout())
+    
+    
+        navigate("/")
     }
 
 
+    const switchToFeed = () => {
+
+        navigate("/stallfeed")
+    }
 
 
   return (
@@ -22,7 +31,14 @@ function Logout() {
         <h1 className= "username1">{user.username}</h1>
         <div className ="profilePic">
 
-        <p class="button" data-tooltip="I’m the tooltip text.">I’m a button with a tooltip</p>
+        <p className="profilecard">
+            <span className= "dollcard">DOLL CARD </span>
+            <span className="profuser">username: {user.username}</span>
+            <span className="profcountry"> country: {user.country}</span>
+            <span className="profage"> age:{user.age}</span>
+            <span className="proffirst"> first name: {user.firstname}</span>
+            <span className="proflast"> last name: {user.lastname}</span>
+        </p>
           
             
    
@@ -33,7 +49,7 @@ function Logout() {
 
 
         <button className="logout" onClick={(e) => handleLogout(e)}>Logout</button>
-        <button className="feedbttn "> stall feed</button>
+        <button className="feedbttn " onClick={switchToFeed}> stall feed</button>
       
     </div>
   )

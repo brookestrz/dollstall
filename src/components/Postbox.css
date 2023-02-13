@@ -1,0 +1,32 @@
+
+
+.postBox {
+
+    padding-bottom: 10px;
+    border-bottom: 8px solid;
+    padding-right: 10px;
+    color: hotpink; 
+}
+
+.postBox > form {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.postinput {
+    padding: 20px;
+    display: flex;
+}
+
+.postinput > input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+.postButton {
+    background-color: hotpink;
+
+}

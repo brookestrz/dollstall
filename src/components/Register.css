@@ -1,0 +1,90 @@
+.register {
+    
+    font-family:  DollFont;
+    position: absolute;
+    color: hotpink;
+    left: 390px;
+    top: 200px;
+    color: hotpink;
+    font-size: 50px;
+    
+    }
+
+
+    input {
+
+        background-color: hotpink;
+    }
+    
+
+    .email {
+        position: absolute;
+        left: 230px
+
+    }
+    .usernameR {
+        position: absolute;
+        left: 230px;
+        top: 30px;
+
+    }
+    .passwordR {
+        position: absolute;
+        left: 230px;
+        top: 60px;
+
+    }
+
+
+    .country {
+        position: absolute;
+        left: 230px;
+        top: 90px;
+
+    }
+    .age {
+        position: absolute;
+        left: 230px;
+        top: 120px;
+
+    }
+    .first_name {
+        position: absolute;
+        left: 230px;
+        top: 150px;
+
+    }
+    .last_name {
+        position: absolute;
+        left: 230px;
+        top: 180px;
+
+    }
+
+    .welcome {
+
+
+        position: absolute;
+        top: -220px;
+        left: 80px;
+    }
+
+
+    @keyframes float {
+        0% {
+            
+            transform: translatey(0px);
+        }
+        50% {
+            
+            transform: translatey(-20px);
+        }
+        100% {
+            
+            transform: translatey(0px);
+        }
+    }
+     .welcome{
+       animation: float 6s ease-in-out infinite;
+       
+    }

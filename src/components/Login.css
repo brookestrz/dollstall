@@ -75,3 +75,40 @@ top: 270px;
    animation: float 10s ease-in-out infinite;
    
 }
+
+
+.reg {
+font-family:  DollFont;
+position: absolute;
+background-color: hotpink;
+left: 250px;
+top: 400px;
+
+font-size: 20px;
+
+
+}
+
+
+.submit {
+font-family:  DollFont;
+position: absolute;
+background-color: hotpink;
+left: 250px;
+top: 300px;
+
+font-size: 20px;
+
+}
+
+.reghead {
+    color: hotpink;
+    position: absolute;
+    top: 330px;
+    left: 250px;
+    font-size: 20px
+    
+
+
+
+}
