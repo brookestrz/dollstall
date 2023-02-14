@@ -25,6 +25,11 @@ function Logout() {
         navigate("/stallfeed")
     }
 
+    const mutualAidReq = () => {
+
+        navigate("/mutualaid")
+    }
+
 
   return (
     <div>
@@ -50,6 +55,7 @@ function Logout() {
 
         <button className="logout" onClick={(e) => handleLogout(e)}>Logout</button>
         <button className="feedbttn " onClick={switchToFeed}> stall feed</button>
+        <button className="mbttn " onClick={mutualAidReq}> Mutual aid request </button>
       
     </div>
   )
