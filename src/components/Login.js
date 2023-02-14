@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux"
 import {login} from "../userSlice";
 import "./Login.css"
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 
 
 
@@ -17,10 +18,20 @@ const Login = () => {
         navigate("/register")
     }
 
-    const handleSubmit =(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-
+        const response = await axios.get(
+            "http://127.0.0.1:8000/login/" +
+            username +"/" +  password + "/"
+          );
+          if (response.body === "Invalid username") {
+            alert(response.body)
+          }
+          else if (response.body === "Incorrect password"){
+            alert(response.body)
+          }
+        else {
         dispatch(login({
             username: username,
             password: password,
@@ -29,6 +40,7 @@ const Login = () => {
         })
         );
         navigate("/logout")
+    }
     };
 
 

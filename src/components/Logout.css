@@ -37,7 +37,7 @@
     font-family:  DollFont;
     position: absolute;
     top: 650px;
-    right: 590px;
+    right: 1290px;
     background-color: hotpink;
 }
 
@@ -51,8 +51,8 @@
     background-position: center center;
     background-size: cover;
     position: absolute;
-    top: 50px;
-    left: 40px;
+    top: 100px;
+    left: 200px;
     animation: float 4s ease-in-out infinite;
   }
 

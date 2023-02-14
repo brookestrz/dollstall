@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {useDispatch} from "react-redux"
 import {register} from "../userSlice";
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
 import "./Register.css"
 function Register() {
 
@@ -17,8 +18,21 @@ function Register() {
     const navigate = useNavigate()
 
 
-    const handleSubmit =(e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
+        const response = await axios.post(
+            "http://127.0.0.1:8000/dolls/",
+            {email: email,
+                password: password,
+                country: country,
+                user_name: username,
+                age: age,
+                first_name: firstname,
+                last_name: lastname
+            }
+
+          );
 
 
         dispatch(register({
@@ -34,6 +48,7 @@ function Register() {
         );
         
         navigate("/logout")
+        console.log(response.body)
 
 
     };

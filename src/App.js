@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import Logout from "./components/Logout"
 import Register from "./components/Register"
 import StallFeed from "./components/StallFeed"
+import Feed from "./components/Feed"
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route path = "/logout" element={<Logout/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/stallfeed" element={<StallFeed/>}/>
+      <Route path="/feed" element={<Feed/>}/>
 
     
       </Routes>

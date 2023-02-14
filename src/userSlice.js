@@ -1,11 +1,16 @@
 import {createSlice} from "@reduxjs/toolkit"
 
+const data = {
+    username: "brookelol",
+    posts: "I''m so bored"
+}
+
 
 export const userSlice =  createSlice({
     name: "user",
     initialState:{
         user:null,
-        posts: null
+        posts: data
     },
     reducers:{
         login: (state,action) => {

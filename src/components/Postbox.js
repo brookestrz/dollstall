@@ -3,6 +3,8 @@ import { Avatar , Button } from "@material-ui/core"
 import {useDispatch} from "react-redux"
 import {post ,selectUser} from "../userSlice";
 import { useSelector } from "react-redux"
+import "./Postbox.css"
+
 
 function Postbox() {
     const [p, setP] = useState("")
@@ -16,6 +18,7 @@ function Postbox() {
 
         dispatch(post({username: user.username ,posts: p})
         );
+        
     
     };
 
@@ -27,7 +30,7 @@ function Postbox() {
     <div className="postBox">
         <form>
             <div className="postinput">
-                <Avatar></Avatar>
+                <Avatar className="pic" alt="brooke" src='./img.png'></Avatar>
                 <input placeholder="Anything you'd like to say? or sell?" type="text"value={p} onChange={(e) => setP(e.target.value)} />
                 </div>
 
