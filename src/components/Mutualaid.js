@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux"
 import {request} from "../userSlice";
 import { useNavigate } from 'react-router-dom';
 
-function Mutualaid() {
+function MutualAid() {
 
     const [ description, setDescription] = useState("")
     const [amount, setAmount] = useState("")
@@ -41,4 +41,4 @@ function Mutualaid() {
   )
 }
 
-export default Mutualaid
+export default MutualAid

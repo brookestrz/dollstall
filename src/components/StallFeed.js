@@ -2,7 +2,7 @@ import React from 'react'
 import "./StallFeed.css"
 import Postbox from "./Postbox.js"
 import Bubble from "./Bubble"
-import {post ,selectUser, selectPosts} from "../userSlice";
+import {selectPosts} from "../userSlice";
 import { useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 
